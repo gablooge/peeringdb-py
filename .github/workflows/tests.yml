@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install uv
-        uses: gablooge/workflows/uv@v1
+        uses: gablooge/workflows/uv@main
       - name: Run linters
         run: |
           uv run pre-commit run --all-files
@@ -26,7 +26,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
       - name: Install uv
-        uses: gablooge/workflows/uv@v1
+        uses: gablooge/workflows/uv@main
       - name: Install python
         run: uv python install ${{ matrix.python-version }}
       - name: install tox
